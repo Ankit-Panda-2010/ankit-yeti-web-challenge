@@ -27,7 +27,7 @@ export default function Home() {
       </p>
       {/* TODO: Your code here */}
       <div className="flex gap-2 mt-4">
-        <Input placeholder="Input Todo..." value={todo}
+        <Input className="w-64" placeholder="Input Todo..." value={todo}
           onChange={e => setTodo(e.target.value)}
           onKeyDown={e => { if (e.key === "Enter") handleAddTodo(); }}/>
         <Button className="bg-blue-500 ..." onClick={handleAddTodo} >Add</Button>
@@ -36,7 +36,7 @@ export default function Home() {
         {todos.map((item, idx) => (
           <li key={idx}>
             <button
-              className="w-full text-left px-3 py-2 rounded border border-input bg-background hover:bg-accent transition cursor-pointer shadow-sm"
+              className="w-64 text-left px-3 py-2 rounded border border-input bg-background hover:bg-accent transition cursor-pointer shadow-sm"
               onClick={() => handleRemoveTodo(idx)}
             >
               {item}
